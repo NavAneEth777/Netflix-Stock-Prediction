@@ -1,58 +1,79 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: black;
     color: white;
-    margin: 30px; 
+    font-family: sans-serif;
+    margin: 30px;
 }
+
 .container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
-h1{
-    font-size: 60px;
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
 }
-h1:hover{
+
+h1:hover {
     color: yellow;
     cursor: pointer;
 }
-form div {
-    margin: 20px;
+
+form {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 100%;
 }
-input{
+
+form div {
+    margin: 10px;
+    width: 45%;
+}
+
+label {
+    font-size: 1.2rem; 
+    font-weight: bold;
+}
+
+input {
     height: 45px;
     width: 100%;
     border-radius: 10px;
     padding: 10px;
+}
 
-}
-label {
-    font-size: 20px;
-    font-weight: 800;
-}
-button{
-    font-size: 30px;
+button {
+    font-size: 1.5rem; 
     text-decoration: none;
     border: none;
     background-color: red;
     color: white;
-    padding: 10px;
+    padding: 10px 20px; 
     border-radius: 10px;
-    margin-left: 200px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 10px auto;
 }
+
 button:hover {
     color: yellow;
     cursor: pointer;
 }
+
 marquee {
-    font-size: 40px;
+    font-size: 2rem;
+    text-align: center;
 }
+
 marquee:hover {
     color: yellow;
 }
@@ -60,9 +81,16 @@ marquee:hover {
 h1 {
     animation: blinker 0.5s linear infinite;
 }
+
 @keyframes blinker {
     50% {
         color: red;
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    form div {
+        width: 100%;
     }
 }
